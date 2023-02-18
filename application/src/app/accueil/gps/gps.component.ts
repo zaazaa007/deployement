@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-gps',
+  templateUrl: './gps.component.html',
+  styleUrls: ['./gps.component.scss']
 })
-export class AppComponent {
+export class GpsComponent {
   title = 'application';
   mapOptions: google.maps.MapOptions = {
     center: { lat: 38.9987208, lng: -7.6783124 },
