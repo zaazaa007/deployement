@@ -8,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class GpsComponent {
   title = 'application';
   mapOptions: google.maps.MapOptions = {
-    center: { lat: 38.9987208, lng: -7.6783124 },
-    zoom : 14
+    center: { lat: 33.589886, lng: -7.603869 },
+    zoom : 14,
+    
  }
  marker = {
-    position: { lat: 38.9987208, lng: -7.6783124 },
+    position: { lat: 33.589886, lng: -7.603869,
+      map: Map,
+      title: 'Hello World!',
+      draggable: true,
+      animation: window['google'].maps.Animation.DROP,
+      
+    },
  }
 }

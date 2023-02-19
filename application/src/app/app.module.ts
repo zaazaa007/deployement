@@ -8,6 +8,12 @@ import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import { GoogleMapsModule } from '@angular/google-maps/';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
+
+
+
+
 
 
 
@@ -16,11 +22,15 @@ import { GoogleMapsModule } from '@angular/google-maps/';
 
 import { AppComponent } from './app.component';
 import { GpsComponent } from './accueil/gps/gps.component';
+import { SliderComponent } from './accueil/slider/slider.component';
+import { HomeComponent } from './accueil/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GpsComponent
+    GpsComponent,
+    SliderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +41,12 @@ import { GpsComponent } from './accueil/gps/gps.component';
     MatIconModule,
     MatButtonModule,
     FlexLayoutModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    MatMenuModule,
+    MatCarouselModule.forRoot(),
+
+
+    
     
     
   ],

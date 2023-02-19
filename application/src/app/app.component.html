@@ -16,16 +16,29 @@
       <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
         <mat-icon>menu</mat-icon>
       </button>
-      <span>Responsive Navigation</span>
+      <img src="\assets\img\logo.jpg" alt="" class="img" >
       <span class="menu-spacer"></span>
       <div fxShow="true" fxHide.lt-md>
         <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-        <a href="#" mat-button>Menu Item </a>
-        <a href="#" mat-button>Menu Item 2</a>
-        <a href="#" mat-button>Menu Item 3</a>
-        <a href="#" mat-button>Menu Item 4</a>
-        <a href="#" mat-button>Menu Item 5</a>
-        <a href="#" mat-button>Menu Item 6</a>
+        <a href="#" mat-button>Accueil </a>
+        <button mat-button [matMenuTriggerFor]="menu">produits</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Stores exterieuses</button>
+          <button mat-menu-item>Stores interieurs</button>
+          <button mat-menu-item>Pergolas</button>
+          <button mat-menu-item>Parasole</button>
+          <button mat-menu-item>Fermeture en verre</button>
+          <button mat-menu-item>Toiles tendues</button>
+          <button mat-menu-item>Moustiquaire </button>
+          <button mat-menu-item>Abris de voiture</button>
+          <button mat-menu-item>Couvertures piscune</button>
+          <button mat-menu-item>Hausses de protection</button>
+          <button mat-menu-item>Gammes de toile</button>
+          <button mat-menu-item>Motorisations et automatismes</button>
+
+        </mat-menu>
+        <a href="#" mat-button>contact</a>
+        
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
@@ -34,19 +47,38 @@
     <mat-sidenav #sidenav>
       <mat-nav-list>
         <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-        <a href="#" mat-list-item>Menu Item 1</a>
-        <a href="#" mat-list-item>Menu Item 2</a>
-        <a href="#" mat-list-item>Menu Item 3</a>
-        <a href="#" mat-list-item>Menu Item 4</a>
-        <a href="#" mat-list-item>Menu Item 5</a>
-        <a href="#"mat-list-item>Menu Item 6</a>
+        <a href="#" mat-list-item>Accueil</a>
+        <button mat-button [matMenuTriggerFor]="menu">produits</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Stores exterieuses</button>
+          <button mat-menu-item>Stores interieurs</button>
+          <button mat-menu-item>Pergolas</button>
+          <button mat-menu-item>Parasole</button>
+          <button mat-menu-item>Fermeture en verre</button>
+          <button mat-menu-item>Toiles tendues</button>
+          <button mat-menu-item>Moustiquaire </button>
+          <button mat-menu-item>Abris de voiture</button>
+          <button mat-menu-item>Couvertures piscune</button>
+          <button mat-menu-item>Hausses de protection</button>
+          <button mat-menu-item>Gammes de toile</button>
+          <button mat-menu-item>Motorisations et automatismes</button>
+
+        </mat-menu>
+
+        
+        <a href="#" mat-list-item>contacts</a>
+        
       </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content fxFlexFill>Main content</mat-sidenav-content>
+    <mat-sidenav-content fxFlexFill>
+      <app-home></app-home>
+
+    </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
 
-<app-gps></app-gps>
+
+
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
